@@ -49,7 +49,7 @@
  */
 class Solution {
   public String customSortString(String order, String str) {
-    final int[] count = new int[26];
+    int[] count = new int[26];
     
     // count the number of individual letters in @param str
     for (char c : str.toCharArray()) {
@@ -60,17 +60,15 @@ class Solution {
     
     // put the letters int the order of @param order
     for (char c : order.toCharArray()) {
-      while (count[c - 'a'] > 0) {
+      while (count[c - 'a']-- > 0) {
         ans.append(c);
-        count[c - 'a']--;
       }
     }
     
-    // add all the reamaining letters that are not in @param order
-    for (char c = 'a'; c <= 'z'; ++c) {
-      while (count[c - 'a'] > 0) {
+    // add all the remaining letters that are not in @param order
+    for (char c = 'a'; c <= 'z'; c++) {
+      while (count[c - 'a']-- > 0) {
         ans.append(c);
-        count[c - 'a']--;
       }
     }
     return ans.toString();        
