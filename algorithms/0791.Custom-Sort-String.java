@@ -49,7 +49,7 @@
  */
 class Solution {
   public String customSortString(String order, String str) {
-    final int[] count = new int[26];
+    int[] count = new int[26];
     
     // count the number of individual letters in @param str
     for (char c : str.toCharArray()) {
