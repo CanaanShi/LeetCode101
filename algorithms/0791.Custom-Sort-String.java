@@ -50,15 +50,22 @@
 class Solution {
   public String customSortString(final String order, final String str) {
     final int[] count = new int[26];
+    
+    // statistics letter numbers of str
     for (final char c : str.toCharArray()) {
       ++count[c - 'a'];
     }
-    final StringBuilder sb = new StringBuilder();
-    for (final char c : order.toCharArray()) {
+    
+    StringBuilder sb = new StringBuilder();
+    
+    // put letter by oder
+    for (char c : order.toCharArray()) {
       while (count[c - 'a']-- > 0) {
         sb.append(c);
       }
     }
+    
+    // append letter what didn't appear in order
     for (char c = 'a'; c <= 'z'; ++c) {
       while (count[c - 'a']-- > 0) {
         sb.append(c);
