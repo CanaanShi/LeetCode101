@@ -48,29 +48,31 @@
  * 
  */
 class Solution {
-  public String customSortString(final String order, final String str) {
+  public String customSortString(String order, String str) {
     final int[] count = new int[26];
     
-    // statistics letter numbers of str
-    for (final char c : str.toCharArray()) {
-      ++count[c - 'a'];
+    // count the number of individual letters in @param str
+    for (char c : str.toCharArray()) {
+      count[c - 'a']++;
     }
     
-    StringBuilder sb = new StringBuilder();
+    StringBuilder ans = new StringBuilder();
     
-    // put letter by oder
+    // put the letters int the order of @param order
     for (char c : order.toCharArray()) {
-      while (count[c - 'a']-- > 0) {
-        sb.append(c);
+      while (count[c - 'a'] > 0) {
+        ans.append(c);
+        count[c - 'a']--;
       }
     }
     
-    // append letter what didn't appear in order
+    // add all the reamaining letters that are not in @param order
     for (char c = 'a'; c <= 'z'; ++c) {
-      while (count[c - 'a']-- > 0) {
-        sb.append(c);
+      while (count[c - 'a'] > 0) {
+        ans.append(c);
+        count[c - 'a']--;
       }
     }
-    return sb.toString();        
+    return ans.toString();        
   }
 }
