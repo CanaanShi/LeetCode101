@@ -60,15 +60,17 @@ class Solution {
     
     // put the letters int the order of @param order
     for (char c : order.toCharArray()) {
-      while (count[c - 'a']-- > 0) {
+      while (count[c - 'a'] > 0) {
         ans.append(c);
+        count[c - 'a']--;
       }
     }
     
     // add all the remaining letters that are not in @param order
     for (char c = 'a'; c <= 'z'; c++) {
-      while (count[c - 'a']-- > 0) {
+      while (count[c - 'a'] > 0) {
         ans.append(c);
+        count[c - 'a']--;
       }
     }
     return ans.toString();        
