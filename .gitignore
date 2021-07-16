@@ -7,7 +7,7 @@
 *.iml
 out
 gen
-target
+target/
 ### Java template
 # Compiled class file
 *.class
@@ -35,3 +35,6 @@ hs_err_pid*
 
 .gitignore
 .idea/
+.settings
+.project
+.classpath
