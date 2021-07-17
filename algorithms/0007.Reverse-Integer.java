@@ -50,11 +50,11 @@ class Solution {
       // take the last number
       int tail = x % 10;
       // if ans * 10 + tail > MAX_VALUE, out of memory
-      if (ans > Integer.MAX_VALUE || (ans == Integer.MAX_VALUE && tail > 7)) {
+      if (ans > Integer.MAX_VALUE / 10 || (ans == Integer.MAX_VALUE / 10 && tail > 7)) {
         return 0;
       }
       // if ans * 10 + tail < Min_VALUE, out of memory
-      if (ans < Integer.MIN_VALUE || (ans == Integer.MIN_VALUE && tail < -8)) {
+      if (ans < Integer.MIN_VALUE / 10 || (ans == Integer.MIN_VALUE / 10 && tail < - 8)) {
         return 0;
       }
       ans = ans * 10 + tail;
