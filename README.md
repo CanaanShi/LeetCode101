@@ -14,6 +14,7 @@
 | #      | Title | Solutions | Tag | Difficulty | 
 | ---------- | :-----------:  | :-----------: | :-----------:  | :-----------: |
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum) |[Soultion](algorithms/0001.Two-Sum.java)| Array,Hash Table | Easy |
+| 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Solution](algorithms/0121.Best-Time-to-Buy-and-Sell-Stock.java)| Array, Dynamic Programming | Easy |
 | 0162 | [Find Peak Element](https://leetcode.com/problems/find-peak-element/)| [Solution](algorithms/0162.Find-Peak-Element.java)|Array, Binary Search | Medium |
 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | [Solution](algorithms/0852.Peak-index-in-a-Mountain-Array.java)| Binary Search | Easy |
 | 0791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | [Solution](algorithms/0791.Custom-Sort-String.java)| Hash Table, String, Sorting | Medium|
