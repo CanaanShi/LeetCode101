@@ -49,11 +49,13 @@ class Solution {
     while (x != 0) {
       // take the last number
       int tail = x % 10;
-      // if ans * 10 + tail > MAX_VALUE, out of memory
+      // if ans > MAX_VALUE / 10, there is still tail to add,so memory overflows
+      // if ans == MAX_VALUE / 10, and tail > 7 ,it memory overflows, because 7 is digits of 2 ^ 31 - 1
       if (ans > Integer.MAX_VALUE / 10 || (ans == Integer.MAX_VALUE / 10 && tail > 7)) {
         return 0;
       }
-      // if ans * 10 + tail < Min_VALUE, out of memory
+      // if ans < Min_VALUE / 10, there is still tail to add, so memory overflows
+      // if ans == MIN_VALUE / 10, and tail < -8,it memory overflows, because -8 is digits of -2 ^ 31
       if (ans < Integer.MIN_VALUE / 10 || (ans == Integer.MIN_VALUE / 10 && tail < - 8)) {
         return 0;
       }
