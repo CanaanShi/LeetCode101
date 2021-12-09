@@ -65,7 +65,7 @@ class Solution {
      * return nums[left] == target?left:-1;
      */
 
-    // when left == tight + 1,foramat is [right+1,right],
+    // when left == right + 1,range is [right+1,right],
     // the while(left <= right) stop, and return -1.
     while (left <= right) {
       int mid = left + (right - left) / 2;
