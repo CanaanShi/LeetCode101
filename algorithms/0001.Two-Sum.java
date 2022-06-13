@@ -63,8 +63,8 @@
 // import java.util.Map;
 
 class Solution {
-  public int[] twoSum(int[] nums, int target) {
     // way 1 Brute force
+  public int[] twoSum1(int[] nums, int target) {
     for (int i = 0; i < nums.length; i++) {
 
       for (int j = i + 1; j < nums.length; j++) {
@@ -77,9 +77,10 @@ class Solution {
       }
     }
     throw new IllegalArgumentException("No two sum solution");
+  }
 
-    // way 2 Hash Table
-    /*
+  // way 2 Hash Table
+  public int[] twoSum2(int[] nums, int target) {
     Map<Integer, Integer> map = new HashMap<>();
 
     for (int i = 0; i < nums.length; i++) {
@@ -91,6 +92,5 @@ class Solution {
       map.put(nums[i], i);
     }
     throw new IllegalArgumentException("No two sum solution");
-    */
   }
 }
