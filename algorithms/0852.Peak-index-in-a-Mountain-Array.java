@@ -61,7 +61,7 @@
  */
 class Solution {
   public int peakIndexInMountainArray(int[] arr) {
-    // way 1
+    // way 1: simple way
     int i = 0;
     while (arr[i] < arr[i + 1]) {
       i++;
@@ -70,7 +70,7 @@ class Solution {
         
         
     /*
-     * way 2
+     * way 2: efficiency way
       if(arr.length == 1){
           return 0;
       }else if(arr[0]>arr[1]){
